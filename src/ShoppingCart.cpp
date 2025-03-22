@@ -1,5 +1,15 @@
+/*
+    Ruben Salazar
+    CMPR 131
+    March 19, 2025
+
+    Homework 2
+
+    Collaboration:
+    None
+*/
+
 #include "ShoppingCart.h"
-#include <cstddef>
 #include <iostream>
 #include <fstream>
 #include <cctype>

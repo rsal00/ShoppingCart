@@ -1,3 +1,14 @@
+/*
+    Ruben Salazar
+    CMPR 131
+    March 19, 2025
+
+    Homework 2
+
+    Collaboration:
+    None
+*/
+
 #pragma once
 #ifndef SHOPPINGCART_H
 #define SHOPPINGCART_H
