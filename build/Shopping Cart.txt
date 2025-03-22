@@ -1,0 +1,4 @@
+Item 1: Lettuce
+Item 2: Milk
+Item 3: chips
+Item 4: Water
