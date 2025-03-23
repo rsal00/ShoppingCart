@@ -1,4 +1,4 @@
-Item 1: Lettuce
-Item 2: Milk
-Item 3: chips
-Item 4: Water
+Item 1: Milk
+Item 2: Bananas
+Item 3: Juice
+Item 4: Soda

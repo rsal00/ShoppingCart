@@ -113,10 +113,10 @@ void ShoppingCart::removeItem(string item)
 // the item inputted by the user to remove
 bool ShoppingCart::checkItems(string inCart, string removeItem)
 {
-    // Put the item we want to remove into a C-String
+    // C-String for item to remove
     char* r_str = new char[removeItem.size()];
 
-    // Put the item in the cart to compare into a C-String
+    // C-String for item in the cart we want to compare
     char *c_str = new char[inCart.size()];
 
     // Check if allocation is successful
@@ -156,7 +156,7 @@ bool ShoppingCart::checkItems(string inCart, string removeItem)
     }
     // Conditional to check if the item in the cart's first letter is lowercase
     // and item to remove's first letter is uppercase
-    else if (islower(*(c_str)) && isupper(*(r_str)))
+    else if (islower(*(c_str)))
     {
         *(c_str) = toupper(*(c_str)); // Make item in the cart's first letter uppercase
         for (int i = 0; i < inCart.size(); i++)
@@ -214,8 +214,7 @@ void ShoppingCart::listItems() const
 // Function to resize the array when we want to add an item after reaching half the capacity.
 void ShoppingCart::resize()
 {
-    int newCapacity = capacity * 2; // Double the array capacity
-    capacity = newCapacity;
+    capacity *= 2; // Double the capacity
     string* temp = new string[capacity]; // Allocate a new array with new capacity
     for (int i = 0; i < capacity; i++)
     {
@@ -223,6 +222,7 @@ void ShoppingCart::resize()
     }
     delete[] cart; // Deallocate old array
     cart = temp; // Point cart to the new array
+    cout << "Capacity : " << capacity << endl;
 }
 
 // Returns number of items
