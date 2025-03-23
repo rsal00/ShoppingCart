@@ -49,7 +49,7 @@ int main()
                 cout << "What item do you want to remove?: ";
                 cin >> item;
                 cout << endl;
-                cart1. removeItem(item);
+                cart1.removeItem(item);
                 cout << endl;
                 break;
             case '4':

@@ -138,6 +138,10 @@ bool ShoppingCart::checkItems(string inCart, string removeItem)
         c_str[i] = inCart[i];
     }
 
+    // Count to keep track of the amount of times the in cart item and item to remove
+    // have the same letter
+    int sameCount = 0;
+
     // Condition to check if user inputted a lowercase letter in as the first character for a string
     if (islower(*(r_str)))
     {
@@ -146,7 +150,7 @@ bool ShoppingCart::checkItems(string inCart, string removeItem)
         {
             if (r_str[i] == c_str[i]) // Check if the strings are the same
             {
-                return true;
+                sameCount++;
             }
         }
     }
@@ -159,7 +163,7 @@ bool ShoppingCart::checkItems(string inCart, string removeItem)
         {
             if (r_str[i] == c_str[i]) // Check if the strings are the same
             {
-                return true;
+                sameCount++;
             }
         }
     }
@@ -170,9 +174,15 @@ bool ShoppingCart::checkItems(string inCart, string removeItem)
         {
             if (removeItem[i] == inCart[i])
             {
-                return true;
+                sameCount++;
             }
         }
+    }
+
+    // If count is equal to the length of the item in the cart, the item we want to remove is the same
+    if (sameCount == inCart.size())
+    {
+        return true;
     }
 
     // Deallocate the memory for the C-Strings
